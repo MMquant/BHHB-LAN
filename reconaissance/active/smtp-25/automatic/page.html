@@ -1,0 +1,15 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Automatic</title>
+</head><body><b>nmap<br/>
+</b><tt><br/>
+nmap -sV -p 25 -Pn -T5 --host-timeout 15m --script=smtp* -v &lt;IP&gt;<br/>
+<br/>
+</tt><b>Enumerate users from file on given SMTP server<br/>
+</b><br/>
+other SMTP verbs - EXPN, RCPT<b><br/>
+</b><tt><br/>
+smtp-user-enum -M VRFY -U /usr/share/metasploit-framework/data/wordlists/unix_users.txt -t 10.11.1.72<br/>
+<br/>
+</tt></body></html>

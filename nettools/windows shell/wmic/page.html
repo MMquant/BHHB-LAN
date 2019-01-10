@@ -1,0 +1,33 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>wmic</title>
+</head><body><b><span style="font-size: 14pt">wmic</span><span style="font-size: 12pt"><br/>
+</span></b><span style="font-size: 10pt"><tt>https://docs.microsoft.com/en-us/windows/desktop/wmisdk/wmic</tt><b><br/>
+</b><b><br/>
+</b></span><span style="font-size: 10pt"><b>Windows Management Instrumentation Command-Line</b></span><br/>
+<br/>
+<br/>
+<b><span style="font-size: 12pt">Examples</span></b><br/>
+<b><br/>
+List services<br/>
+<br/>
+</b><tt>wmic service list brief<br/>
+<br/>
+</tt><b>List installed apps<br/>
+</b><br/>
+wmic product<br/>
+<br/>
+<b>Commands for service permission check (wmic and icacls used)<br/>
+<br/>
+</b><tt>for /f &quot;tokens=2 delims='='&quot; %a in ('wmic service list full^|find /i &quot;pathname&quot;^|find /i /v &quot;system32&quot;') do @echo %a &gt;&gt; c:\windows\temp\permissions.txt<br/>
+for /f eol^=^&quot;^ delims^=^&quot; %a in (c:\windows\temp\permissions.txt) do cmd.exe /c icacls &quot;%a&quot;<br/>
+<br/>
+</tt><b>List installed patches<br/>
+<br/>
+</b><tt>wmic qfe get Caption,Description,HotFixID,InstalledOn<br/>
+<br/>
+</tt><b>Grep specific patches<br/>
+<br/>
+</b><tt>wmic qfe get Caption,Description,HotFixID,InstalledOn | findstr /C:&quot;KB..&quot; /C:&quot;KB..&quot;<br/>
+</tt></body></html>

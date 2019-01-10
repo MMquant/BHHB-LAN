@@ -1,0 +1,25 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>JTR</title>
+</head><body><b><span style="font-size: 14pt">JTR</span><br/>
+</b><tt>https://www.openwall.com/john/</tt><b><br/>
+</b><b><br/>
+fast password cracker<br/>
+<br/>
+<br/>
+<span style="font-size: 12pt">Examples</span><br/>
+<br/>
+</b><b>Sample hashes</b><tt><br/>
+</tt><tt><br/>
+</tt><tt>http://openwall.info/wiki/john/sample-hashes</tt><b><br/>
+</b><b><br/>
+Crack hashes from FGdump file<br/>
+</b><tt><br/>
+john --rules --wordlist=/usr/share/wordlists/rockyou.txt 127.0.0.1.pwdump<br/>
+<br/>
+</tt><b>Cracking shadow files<br/>
+</b><tt><br/>
+unshadow passwd-file.txt shadow-file.txt &gt; unshadowed.txt<br/>
+john --rules --wordlist=/usr/share/wordlists/rockyou.txt unshadowed.txt<br/>
+</tt></body></html>

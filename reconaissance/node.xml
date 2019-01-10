@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>expanded</key><false/>
+  <key>duplicate_of</key><string>0308a9bd-889d-41a4-845c-68a7bec2360a</string>
+  <key>nodeid</key><string>97922690-2317-4613-ba3d-29cc630e3cc2</string>
+  <key>modified_time</key><integer>1508250675</integer>
+  <key>expanded2</key><true/>
+  <key>content_type</key><string>text/xhtml+xml</string>
+  <key>created_time</key><integer>1508250675</integer>
+  <key>info_sort_dir</key><integer>1</integer>
+  <key>icon</key><string>folder-green.png</string>
+  <key>title</key><string>Reconaissance</string>
+  <key>version</key><integer>6</integer>
+  <key>order</key><integer>1</integer>
+  <key>info_sort</key><string>order</string>
+</dict>
+</node>

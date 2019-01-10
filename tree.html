@@ -1,0 +1,251 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<style>
+.node
+{
+    padding-left: 20px;
+    display: block;
+}
+
+.node_collapsed
+{
+    padding-left: 20px;
+    display: none;
+
+    
+    visibility: hidden;
+    display: none;
+}
+
+
+
+a:active
+{
+text-decoration:none;
+color: #0000FF;
+font-weight: bold;
+}
+
+a:visited
+{
+text-decoration:none;
+color: #000;
+font-weight: bold;
+}
+
+a:link
+{
+text-decoration:none;
+color: #000;
+font-weight: bold;
+}
+
+a:hover
+{
+text-decoration: underline;
+color: #500;
+font-weight: bold;
+}
+
+</style>
+
+
+<script language="javascript">
+  
+    var displayStates = [];
+
+    function showDiv(div)
+    {    
+        div.style.height     = "";
+        div.style.display    = "block";
+        div.style.visibility = "visible";
+    }
+
+    function hideDiv(div)
+    {
+        div.style.height     = "0px";
+        div.style.display    = "none";      
+        div.style.visibility = "hidden";
+    }
+
+    function toggleDiv(div, defaultState)
+    {
+
+        // set default on first use
+        if (displayStates[div] == undefined)
+            displayStates[div] = defaultState;
+
+        // toggle state
+        displayStates[div] = !displayStates[div];       
+
+        // hide / show
+        if (displayStates[div])
+            showDiv(div);
+        else {
+            hideDiv(div);
+        }
+    }
+
+    function toggleDivName(divname, defaultState)
+    {
+        toggleDiv(document.getElementById(divname), defaultState);
+    }
+
+</script>
+
+<nobr><tt><a href='javascript: toggleDivName("c84332ed-c2a3-4692-92b7-860b5a074331", true)'>+</a>&nbsp;</tt>LAN_notes</nobr><br/>
+<div id='c84332ed-c2a3-4692-92b7-860b5a074331' class='node'><nobr><tt><a href='javascript: toggleDivName("cea8e5a5-52bc-493c-8c79-acf3792a8d17", false)'>+</a>&nbsp;</tt>NetTools</nobr><br/>
+<div id='cea8e5a5-52bc-493c-8c79-acf3792a8d17' class='node_collapsed'><nobr><tt>&nbsp;&nbsp;</tt><a href='nettools/common%20ports/page.html' target='viewer'>Common ports</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='nettools/iptables/page.html' target='viewer'>IPtables</a></nobr><br/>
+<nobr><tt><a href='javascript: toggleDivName("8dac96a8-52fb-40a1-af89-7cddcc700ad2", true)'>+</a>&nbsp;</tt><a href='nettools/windows%20shell/page.html' target='viewer'>Windows shell</a></nobr><br/>
+<div id='8dac96a8-52fb-40a1-af89-7cddcc700ad2' class='node'><nobr><tt>&nbsp;&nbsp;</tt><a href='nettools/windows%20shell/wmic/page.html' target='viewer'>wmic</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='nettools/windows%20shell/cmd/page.html' target='viewer'>cmd</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='nettools/windows%20shell/acesschk.exe/page.html' target='viewer'>acesschk.exe</a></nobr><br/>
+</div>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='nettools/netcat/page.html' target='viewer'>Netcat</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='nettools/stunnel/page.html' target='viewer'>Stunnel</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='nettools/ncat/page.html' target='viewer'>Ncat</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='nettools/wireshark/page.html' target='viewer'>Wireshark</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='nettools/tcpdump/page.html' target='viewer'>Tcpdump</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='nettools/rinetd/page.html' target='viewer'>Rinetd</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='nettools/plink/page.html' target='viewer'>Plink</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='nettools/reverse%20shells/page.html' target='viewer'>Reverse shells</a></nobr><br/>
+<nobr><tt><a href='javascript: toggleDivName("46636a51-97ba-4470-928d-3d319ac508fb", false)'>+</a>&nbsp;</tt><a href='nettools/ssh/page.html' target='viewer'>SSH</a></nobr><br/>
+<div id='46636a51-97ba-4470-928d-3d319ac508fb' class='node_collapsed'><nobr><tt><a href='javascript: toggleDivName("ff778629-1c67-45bf-b0c3-a6fb961c57e9", false)'>+</a>&nbsp;</tt><a href='nettools/ssh/ssh%20tunneling/page.html' target='viewer'>SSH tunneling</a></nobr><br/>
+<div id='ff778629-1c67-45bf-b0c3-a6fb961c57e9' class='node_collapsed'><nobr><tt>&nbsp;&nbsp;</tt><a href='nettools/ssh/ssh%20tunneling/local/page.html' target='viewer'>LOCAL</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='nettools/ssh/ssh%20tunneling/remote/page.html' target='viewer'>REMOTE</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='nettools/ssh/ssh%20tunneling/dynamic/page.html' target='viewer'>DYNAMIC</a></nobr><br/>
+</div>
+</div>
+</div>
+<nobr><tt><a href='javascript: toggleDivName("97922690-2317-4613-ba3d-29cc630e3cc2", false)'>+</a>&nbsp;</tt><a href='reconaissance/page.html' target='viewer'>Reconaissance</a></nobr><br/>
+<div id='97922690-2317-4613-ba3d-29cc630e3cc2' class='node_collapsed'><nobr><tt><a href='javascript: toggleDivName("34e2ec8f-531d-407e-8688-da76fcac2e42", true)'>+</a>&nbsp;</tt><a href='reconaissance/active/page.html' target='viewer'>Active</a></nobr><br/>
+<div id='34e2ec8f-531d-407e-8688-da76fcac2e42' class='node'><nobr><tt><a href='javascript: toggleDivName("94362855-a9be-46e9-b627-2c03082eda2b", false)'>+</a>&nbsp;</tt><a href='reconaissance/active/nmap%202/page.html' target='viewer'>nmap</a></nobr><br/>
+<div id='94362855-a9be-46e9-b627-2c03082eda2b' class='node_collapsed'><nobr><tt>&nbsp;&nbsp;</tt><a href='reconaissance/active/nmap%202/general/page.html' target='viewer'>General</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='reconaissance/active/nmap%202/firewall%20evasion/page.html' target='viewer'>Firewall evasion</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='reconaissance/active/nmap%202/pivot%20scanning/page.html' target='viewer'>Pivot scanning</a></nobr><br/>
+</div>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='reconaissance/active/netdiscover/page.html' target='viewer'>netdiscover</a></nobr><br/>
+<nobr><tt><a href='javascript: toggleDivName("c90bc985-f9c8-4b05-ab32-da7fc96051d3", false)'>+</a>&nbsp;</tt><a href='reconaissance/active/ftp-21/page.html' target='viewer'>FTP/21</a></nobr><br/>
+<div id='c90bc985-f9c8-4b05-ab32-da7fc96051d3' class='node_collapsed'><nobr><tt>&nbsp;&nbsp;</tt><a href='reconaissance/active/ftp-21/manual/page.html' target='viewer'>Manual</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='reconaissance/active/ftp-21/automatic/page.html' target='viewer'>Automatic</a></nobr><br/>
+</div>
+<nobr><tt><a href='javascript: toggleDivName("4e81b8d1-581a-4c5d-b184-b82fc6d9a17d", false)'>+</a>&nbsp;</tt><a href='reconaissance/active/ssh-22/page.html' target='viewer'>SSH/22</a></nobr><br/>
+<div id='4e81b8d1-581a-4c5d-b184-b82fc6d9a17d' class='node_collapsed'><nobr><tt>&nbsp;&nbsp;</tt><a href='reconaissance/active/ssh-22/automatic/page.html' target='viewer'>Automatic</a></nobr><br/>
+</div>
+<nobr><tt><a href='javascript: toggleDivName("0ada4e57-fc73-45bf-966c-1256022331b0", false)'>+</a>&nbsp;</tt><a href='reconaissance/active/telnet-23/page.html' target='viewer'>Telnet/23</a></nobr><br/>
+<div id='0ada4e57-fc73-45bf-966c-1256022331b0' class='node_collapsed'><nobr><tt>&nbsp;&nbsp;</tt><a href='reconaissance/active/telnet-23/automatic/page.html' target='viewer'>Automatic</a></nobr><br/>
+</div>
+<nobr><tt><a href='javascript: toggleDivName("37a8218b-bef8-46a4-96d9-80cf5849e4b7", false)'>+</a>&nbsp;</tt><a href='reconaissance/active/smtp-25/page.html' target='viewer'>SMTP/25</a></nobr><br/>
+<div id='37a8218b-bef8-46a4-96d9-80cf5849e4b7' class='node_collapsed'><nobr><tt>&nbsp;&nbsp;</tt><a href='reconaissance/active/smtp-25/manual/page.html' target='viewer'>Manual</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='reconaissance/active/smtp-25/automatic/page.html' target='viewer'>Automatic</a></nobr><br/>
+</div>
+<nobr><tt><a href='javascript: toggleDivName("31ecc6ec-69c2-426e-8ccc-b42ccab253ea", false)'>+</a>&nbsp;</tt><a href='reconaissance/active/dns-53/page.html' target='viewer'>DNS/53</a></nobr><br/>
+<div id='31ecc6ec-69c2-426e-8ccc-b42ccab253ea' class='node_collapsed'><nobr><tt>&nbsp;&nbsp;</tt><a href='reconaissance/active/dns-53/automatic/page.html' target='viewer'>Automatic</a></nobr><br/>
+</div>
+<nobr><tt><a href='javascript: toggleDivName("8bbde341-1bb5-445d-89c0-653281539572", false)'>+</a>&nbsp;</tt><a href='reconaissance/active/pop3-110/page.html' target='viewer'>POP3/110</a></nobr><br/>
+<div id='8bbde341-1bb5-445d-89c0-653281539572' class='node_collapsed'><nobr><tt>&nbsp;&nbsp;</tt><a href='reconaissance/active/pop3-110/manual/page.html' target='viewer'>Manual</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='reconaissance/active/pop3-110/automatic/page.html' target='viewer'>Automatic</a></nobr><br/>
+</div>
+<nobr><tt><a href='javascript: toggleDivName("5a7dade0-7967-4833-95ae-bbeb1541f6f8", false)'>+</a>&nbsp;</tt><a href='reconaissance/active/smb-u%28137%2C138%29%2Ct%28137%2C139%2C445%29/page.html' target='viewer'>SMB/U(137,138),T(137,139,445)</a></nobr><br/>
+<div id='5a7dade0-7967-4833-95ae-bbeb1541f6f8' class='node_collapsed'><nobr><tt>&nbsp;&nbsp;</tt><a href='reconaissance/active/smb-u%28137%2C138%29%2Ct%28137%2C139%2C445%29/manual/page.html' target='viewer'>Manual</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='reconaissance/active/smb-u%28137%2C138%29%2Ct%28137%2C139%2C445%29/automatic/page.html' target='viewer'>Automatic</a></nobr><br/>
+</div>
+<nobr><tt><a href='javascript: toggleDivName("95d13e19-d8b1-4301-95d5-6c06e6e24b59", false)'>+</a>&nbsp;</tt><a href='reconaissance/active/imap-143%2C993/page.html' target='viewer'>IMAP/143,993</a></nobr><br/>
+<div id='95d13e19-d8b1-4301-95d5-6c06e6e24b59' class='node_collapsed'><nobr><tt>&nbsp;&nbsp;</tt><a href='reconaissance/active/imap-143%2C993/manual/page.html' target='viewer'>Manual</a></nobr><br/>
+</div>
+<nobr><tt><a href='javascript: toggleDivName("24bb46fb-835d-4cf4-ad43-4add0faa2079", false)'>+</a>&nbsp;</tt><a href='reconaissance/active/snmp-u161/page.html' target='viewer'>SNMP/U161</a></nobr><br/>
+<div id='24bb46fb-835d-4cf4-ad43-4add0faa2079' class='node_collapsed'><nobr><tt>&nbsp;&nbsp;</tt><a href='reconaissance/active/snmp-u161/manual/page.html' target='viewer'>Manual</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='reconaissance/active/snmp-u161/automatic/page.html' target='viewer'>Automatic</a></nobr><br/>
+</div>
+<nobr><tt><a href='javascript: toggleDivName("7c12b58c-f996-4f7c-b245-974bff8399b0", false)'>+</a>&nbsp;</tt><a href='reconaissance/active/ldap-t%28389%2C636%29%2Cu%28389%29/page.html' target='viewer'>LDAP/T(389,636),U(389)</a></nobr><br/>
+<div id='7c12b58c-f996-4f7c-b245-974bff8399b0' class='node_collapsed'><nobr><tt>&nbsp;&nbsp;</tt><a href='reconaissance/active/ldap-t%28389%2C636%29%2Cu%28389%29/automatic/page.html' target='viewer'>Automatic</a></nobr><br/>
+</div>
+<nobr><tt><a href='javascript: toggleDivName("bdf6aa3a-f784-4e0d-886b-6a92635c8e6e", false)'>+</a>&nbsp;</tt><a href='reconaissance/active/ms-sql-1433/page.html' target='viewer'>MS-SQL/1433</a></nobr><br/>
+<div id='bdf6aa3a-f784-4e0d-886b-6a92635c8e6e' class='node_collapsed'><nobr><tt>&nbsp;&nbsp;</tt><a href='reconaissance/active/ms-sql-1433/manual/page.html' target='viewer'>Manual</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='reconaissance/active/ms-sql-1433/automatic/page.html' target='viewer'>Automatic</a></nobr><br/>
+</div>
+<nobr><tt><a href='javascript: toggleDivName("6b5b5878-7c0c-445e-ae5a-338a1b9a1181", false)'>+</a>&nbsp;</tt><a href='reconaissance/active/nfs-2049/page.html' target='viewer'>NFS/2049</a></nobr><br/>
+<div id='6b5b5878-7c0c-445e-ae5a-338a1b9a1181' class='node_collapsed'><nobr><tt>&nbsp;&nbsp;</tt><a href='reconaissance/active/nfs-2049/manual/page.html' target='viewer'>Manual</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='reconaissance/active/nfs-2049/automatic/page.html' target='viewer'>Automatic</a></nobr><br/>
+</div>
+<nobr><tt><a href='javascript: toggleDivName("f7196cb9-95a3-4c9a-a021-1383d3f0161a", false)'>+</a>&nbsp;</tt><a href='reconaissance/active/mysql-3306/page.html' target='viewer'>MYSQL/3306</a></nobr><br/>
+<div id='f7196cb9-95a3-4c9a-a021-1383d3f0161a' class='node_collapsed'><nobr><tt>&nbsp;&nbsp;</tt><a href='reconaissance/active/mysql-3306/manual/page.html' target='viewer'>Manual</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='reconaissance/active/mysql-3306/automatic/page.html' target='viewer'>Automatic</a></nobr><br/>
+</div>
+<nobr><tt><a href='javascript: toggleDivName("6ac0a2bc-d7d7-4e5c-ae95-4efad0832a96", false)'>+</a>&nbsp;</tt><a href='reconaissance/active/rdp-tu3389/page.html' target='viewer'>RDP/TU3389</a></nobr><br/>
+<div id='6ac0a2bc-d7d7-4e5c-ae95-4efad0832a96' class='node_collapsed'><nobr><tt>&nbsp;&nbsp;</tt><a href='reconaissance/active/rdp-tu3389/manual/page.html' target='viewer'>Manual</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='reconaissance/active/rdp-tu3389/automatic/page.html' target='viewer'>Automatic</a></nobr><br/>
+</div>
+<nobr><tt><a href='javascript: toggleDivName("848a5417-378a-4d76-90c9-e6e52667c210", false)'>+</a>&nbsp;</tt><a href='reconaissance/active/rpc/page.html' target='viewer'>RPC</a></nobr><br/>
+<div id='848a5417-378a-4d76-90c9-e6e52667c210' class='node_collapsed'><nobr><tt>&nbsp;&nbsp;</tt><a href='reconaissance/active/rpc/automatic/page.html' target='viewer'>Automatic</a></nobr><br/>
+</div>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='reconaissance/active/udp%20ddos%20scan/page.html' target='viewer'>UDP DDOS scan</a></nobr><br/>
+</div>
+</div>
+<nobr><tt><a href='javascript: toggleDivName("48bfeaf3-d7a4-4693-9280-a959cc76ede9", false)'>+</a>&nbsp;</tt><a href='post%20exploitation/page.html' target='viewer'>Post Exploitation</a></nobr><br/>
+<div id='48bfeaf3-d7a4-4693-9280-a959cc76ede9' class='node_collapsed'><nobr><tt><a href='javascript: toggleDivName("0efb3879-3f03-4caa-bcdd-fe662b52c269", true)'>+</a>&nbsp;</tt><a href='post%20exploitation/file%20transfers/page.html' target='viewer'>File transfers</a></nobr><br/>
+<div id='0efb3879-3f03-4caa-bcdd-fe662b52c269' class='node'><nobr><tt><a href='javascript: toggleDivName("6c5b860a-0679-4581-854c-74584ea6099b", true)'>+</a>&nbsp;</tt><a href='post%20exploitation/file%20transfers/windows/page.html' target='viewer'>Windows</a></nobr><br/>
+<div id='6c5b860a-0679-4581-854c-74584ea6099b' class='node'><nobr><tt>&nbsp;&nbsp;</tt><a href='post%20exploitation/file%20transfers/windows/powershell/page.html' target='viewer'>PowerShell</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='post%20exploitation/file%20transfers/windows/debug.exe/page.html' target='viewer'>debug.exe</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='post%20exploitation/file%20transfers/windows/ftp/page.html' target='viewer'>FTP</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='post%20exploitation/file%20transfers/windows/tftp/page.html' target='viewer'>TFTP</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='post%20exploitation/file%20transfers/windows/vbscript/page.html' target='viewer'>VBscript</a></nobr><br/>
+</div>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='post%20exploitation/file%20transfers/linux/page.html' target='viewer'>Linux</a></nobr><br/>
+</div>
+<nobr><tt><a href='javascript: toggleDivName("5f27f2d6-9237-4ae5-9c53-017fc7c87bf9", true)'>+</a>&nbsp;</tt><a href='post%20exploitation/privilege%20escalation/page.html' target='viewer'>Privilege escalation</a></nobr><br/>
+<div id='5f27f2d6-9237-4ae5-9c53-017fc7c87bf9' class='node'><nobr><tt><a href='javascript: toggleDivName("e4c1871f-1d9a-4901-8fce-ca9b7a451c4c", true)'>+</a>&nbsp;</tt><a href='post%20exploitation/privilege%20escalation/linux/page.html' target='viewer'>Linux</a></nobr><br/>
+<div id='e4c1871f-1d9a-4901-8fce-ca9b7a451c4c' class='node'><nobr><tt><a href='javascript: toggleDivName("de907c65-bafe-4276-bb45-a3f90c177c2b", true)'>+</a>&nbsp;</tt><a href='post%20exploitation/privilege%20escalation/linux/manual/page.html' target='viewer'>Manual</a></nobr><br/>
+<div id='de907c65-bafe-4276-bb45-a3f90c177c2b' class='node'><nobr><tt>&nbsp;&nbsp;</tt><a href='post%20exploitation/privilege%20escalation/linux/manual/links/page.html' target='viewer'>Links</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='post%20exploitation/privilege%20escalation/linux/manual/misconfigured%20permissions/page.html' target='viewer'>Misconfigured permissions</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='post%20exploitation/privilege%20escalation/linux/manual/bash/page.html' target='viewer'>Bash</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='post%20exploitation/privilege%20escalation/linux/manual/exploitation/page.html' target='viewer'>Exploitation</a></nobr><br/>
+</div>
+<nobr><tt><a href='javascript: toggleDivName("6f814a28-f4c9-4237-bf8d-a66e6e41a261", true)'>+</a>&nbsp;</tt><a href='post%20exploitation/privilege%20escalation/linux/automatic/page.html' target='viewer'>Automatic</a></nobr><br/>
+<div id='6f814a28-f4c9-4237-bf8d-a66e6e41a261' class='node'><nobr><tt>&nbsp;&nbsp;</tt><a href='post%20exploitation/privilege%20escalation/linux/automatic/linux-exploit-suggester/page.html' target='viewer'>linux-exploit-suggester</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='post%20exploitation/privilege%20escalation/linux/automatic/unix-privesc/page.html' target='viewer'>unix-privesc</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='post%20exploitation/privilege%20escalation/linux/automatic/linuxprivchecker/page.html' target='viewer'>linuxprivchecker</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='post%20exploitation/privilege%20escalation/linux/automatic/linenum/page.html' target='viewer'>linenum</a></nobr><br/>
+</div>
+</div>
+<nobr><tt><a href='javascript: toggleDivName("1c5b0588-4cc6-41a9-ac17-3da1040ba0b3", true)'>+</a>&nbsp;</tt><a href='post%20exploitation/privilege%20escalation/windows/page.html' target='viewer'>Windows</a></nobr><br/>
+<div id='1c5b0588-4cc6-41a9-ac17-3da1040ba0b3' class='node'><nobr><tt>&nbsp;&nbsp;</tt><a href='post%20exploitation/privilege%20escalation/windows/links/page.html' target='viewer'>Links</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='post%20exploitation/privilege%20escalation/windows/permissions%20overview/page.html' target='viewer'>Permissions overview</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='post%20exploitation/privilege%20escalation/windows/os%20detection/page.html' target='viewer'>OS detection</a></nobr><br/>
+<nobr><tt><a href='javascript: toggleDivName("67229ac2-209f-403f-84c8-b621d7debfb5", true)'>+</a>&nbsp;</tt><a href='post%20exploitation/privilege%20escalation/windows/search/page.html' target='viewer'>Search</a></nobr><br/>
+<div id='67229ac2-209f-403f-84c8-b621d7debfb5' class='node'><nobr><tt>&nbsp;&nbsp;</tt><a href='post%20exploitation/privilege%20escalation/windows/search/unattended%20files/page.html' target='viewer'>Unattended files</a></nobr><br/>
+</div>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='post%20exploitation/privilege%20escalation/windows/exploitation/page.html' target='viewer'>Exploitation</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='post%20exploitation/privilege%20escalation/windows/weak%20services/page.html' target='viewer'>Weak services</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='post%20exploitation/privilege%20escalation/windows/trusted%20service%20paths/page.html' target='viewer'>Trusted service paths</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='post%20exploitation/privilege%20escalation/windows/weak%20service%20property/page.html' target='viewer'>Weak service property</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='post%20exploitation/privilege%20escalation/windows/alwaysinstallelevated/page.html' target='viewer'>AlwaysInstallElevated</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='post%20exploitation/privilege%20escalation/windows/gpp/page.html' target='viewer'>GPP</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='post%20exploitation/privilege%20escalation/windows/upnphost/page.html' target='viewer'>upnphost</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='post%20exploitation/privilege%20escalation/windows/psexec/page.html' target='viewer'>PSexec</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='post%20exploitation/privilege%20escalation/windows/ps%20run%20cmd%20as/page.html' target='viewer'>PS run cmd as</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='post%20exploitation/privilege%20escalation/windows/windows-privesc-check%0A/page.html' target='viewer'>windows-privesc-check
+</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='post%20exploitation/privilege%20escalation/windows/windows-exploit-suggester/page.html' target='viewer'>windows-exploit-suggester</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='post%20exploitation/privilege%20escalation/windows/sherlock/page.html' target='viewer'>sherlock</a></nobr><br/>
+</div>
+</div>
+</div>
+<nobr><tt><a href='javascript: toggleDivName("78b1194d-3b77-4235-956e-10ccfa3c03be", false)'>+</a>&nbsp;</tt><a href='password%20attacks/page.html' target='viewer'>Password Attacks</a></nobr><br/>
+<div id='78b1194d-3b77-4235-956e-10ccfa3c03be' class='node_collapsed'><nobr><tt>&nbsp;&nbsp;</tt><a href='password%20attacks/crunch/page.html' target='viewer'>Crunch</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='password%20attacks/pgdump-fgdump/page.html' target='viewer'>PGdump/FGdump</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='password%20attacks/jtr/page.html' target='viewer'>JTR</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='password%20attacks/wce/page.html' target='viewer'>WCE</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='password%20attacks/pth/page.html' target='viewer'>PTH</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='password%20attacks/hash%20identify/page.html' target='viewer'>Hash identify</a></nobr><br/>
+<nobr><tt><a href='javascript: toggleDivName("c4068bef-ef13-49e0-892e-28b8669d6dfb", true)'>+</a>&nbsp;</tt><a href='password%20attacks/online%20attacks/page.html' target='viewer'>Online Attacks</a></nobr><br/>
+<div id='c4068bef-ef13-49e0-892e-28b8669d6dfb' class='node'><nobr><tt>&nbsp;&nbsp;</tt><a href='password%20attacks/online%20attacks/medusa/page.html' target='viewer'>medusa</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='password%20attacks/online%20attacks/ncrack/page.html' target='viewer'>ncrack</a></nobr><br/>
+<nobr><tt>&nbsp;&nbsp;</tt><a href='password%20attacks/online%20attacks/hydra/page.html' target='viewer'>hydra</a></nobr><br/>
+</div>
+</div>
+</body></html>

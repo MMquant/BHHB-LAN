@@ -1,0 +1,17 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>LOCAL</title>
+</head><body><b><span style="font-size: 12pt">LOCAL port forwarding</span><br/>
+</b><br/>
+Can be used for bypassing egress connection fw rules.<br/>
+We need remote sshd proxyfying server which listens on fw allowed port.<b><br/>
+</b><b><br/>
+Command<br/>
+<br/>
+</b>Executed on machine in network with firewalled egress connection<b><br/>
+</b><tt><br/>
+</tt><tt>ssh &lt;user@sshd_server&gt; -p &lt;sshd_port&gt; -L &lt;local_port&gt;:&lt;remote_webserver&gt;:&lt;</tt>remote_webserver_port<tt>&gt;<br/>
+</tt><tt><br/>
+<img src="image.png"/><br/>
+</tt></body></html>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>expanded</key><false/>
+  <key>duplicate_of</key><string>451279d1-09a2-476f-88e2-098084ce9b9a</string>
+  <key>nodeid</key><string>848a5417-378a-4d76-90c9-e6e52667c210</string>
+  <key>modified_time</key><integer>1543316390</integer>
+  <key>content_type</key><string>text/xhtml+xml</string>
+  <key>created_time</key><integer>1510249425</integer>
+  <key>info_sort_dir</key><integer>1</integer>
+  <key>title</key><string>RPC</string>
+  <key>version</key><integer>6</integer>
+  <key>order</key><integer>16</integer>
+  <key>info_sort</key><string>order</string>
+</dict>
+</node>

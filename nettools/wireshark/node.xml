@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>duplicate_of</key><string>0f06576c-7402-4589-9a3d-19d3a20aa59f</string>
+  <key>title</key><string>Wireshark</string>
+  <key>nodeid</key><string>7fec8f76-7e5d-4149-b9c8-70e9b56149fd</string>
+  <key>modified_time</key><integer>1547103475</integer>
+  <key>version</key><integer>6</integer>
+  <key>content_type</key><string>text/xhtml+xml</string>
+  <key>created_time</key><integer>1508237283</integer>
+  <key>info_sort_dir</key><integer>1</integer>
+  <key>order</key><integer>6</integer>
+  <key>info_sort</key><string>order</string>
+</dict>
+</node>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>duplicate_of</key><string>9b6db255-b28c-4b50-987b-0e4d05b35d47</string>
+  <key>title</key><string>Reverse shells</string>
+  <key>nodeid</key><string>734efd48-871c-4dde-9753-cccc66319e7e</string>
+  <key>modified_time</key><integer>1547103532</integer>
+  <key>version</key><integer>6</integer>
+  <key>content_type</key><string>text/xhtml+xml</string>
+  <key>created_time</key><integer>1510697181</integer>
+  <key>info_sort_dir</key><integer>1</integer>
+  <key>order</key><integer>10</integer>
+  <key>info_sort</key><string>order</string>
+</dict>
+</node>

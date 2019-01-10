@@ -1,0 +1,50 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Manual</title>
+</head><body><b>Manual user enumeration<br/>
+</b><tt><br/>
+nc -nv &lt;IP&gt; &lt;port&gt;<br/>
+VRFY John<br/>
+<br/>
+</tt><span style="font-size: 10pt"><b>SMTP authentication</b></span><br/>
+<tt><br/>
+HELO 10.11.1.72<br/>
+EHLO 10.11.1.72<br/>
+AUTH LOGIN &lt;user in b64&gt;<br/>
+&lt;pass user in b64&gt;<br/>
+quit<br/>
+<br/>
+<br/>
+</tt><b>Open up a connection to the SMTP server<br/>
+</b><tt><br/>
+</tt><tt>telnet mail.yourdomain.com 25</tt><b><br/>
+</b><b><br/>
+Your own hostname (the computer hostname you are connecting FROM)<br/>
+</b><tt><br/>
+</tt><tt>HELO client.example.com</tt><b><br/>
+</b><b><br/>
+Email address you want to send the test email FROM<br/>
+</b><tt><br/>
+</tt><tt>MAIL from: &lt;sender@example.com&gt;</tt><b><br/>
+</b><b><br/>
+Email address you are sending your test email TO<br/>
+</b><tt><br/>
+</tt><tt>RCPT to: &lt;recipient@example.com&gt;</tt><b><br/>
+</b><b><br/>
+Compiling headers and message body<br/>
+</b>After each of these lines press enter to start the next line.<b><br/>
+</b>After the 3rd line, press enter twice so that it puts a blank line between the Subject, and the body of the email.<tt><br/>
+</tt>A period on a line all by itself indicates that is the end of the email.<br/>
+It will then try to send this email to the recipient from the sender email address using the data you provided<br/>
+in the headers above.<b><br/>
+</b><tt><br/>
+DATA<br/>
+From: sender@example.com<br/>
+To: recipient@example.com<br/>
+Subject: Test message<br/>
+<br/>
+This is a test message.<br/>
+This is the body of the message. Type whatever message you want here<br/>
+</tt><tt>.</tt><b><br/>
+</b></body></html>

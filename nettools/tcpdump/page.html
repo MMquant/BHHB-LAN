@@ -1,0 +1,74 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Tcpdump</title>
+</head><body><b><span style="font-size: 14pt">tcpdump</span><span style="font-size: 10pt"><br/>
+</span></b><span style="font-size: 10pt"><tt>http://www.tcpdump.org/</tt></span><b><br/>
+</b><b><br/>
+command-line packet analyzer<br/>
+<br/>
+<br/>
+<span style="font-size: 12pt">Switches</span><br/>
+<br/>
+</b>-n	Don't convert addresses<b><br/>
+</b>-r	Read from file instead of interface<br/>
+-X	Show dump in HEX<br/>
+-A	Show dump in ASCII<br/>
+-i	Select interface<br/>
+<b><br/>
+<br/>
+<span style="font-size: 12pt">Filters</span><br/>
+<br/>
+</b>tcpdump and many packet analyzers use BPF (Berkeley Packet Filter) syntax.<br/>
+Check following resouces:<br/>
+<br/>
+<b>Quick intro</b><br/>
+<tt>https://docs.extrahop.com/7.2/bpf-syntax/<br/>
+</tt><tt>https://community.dynatrace.com/community/display/DNA124/BPF+syntax</tt><br/>
+<b><br/>
+Full reference<br/>
+</b><tt>https://linux.die.net/man/7/pcap-filter</tt><b><br/>
+</b><b><br/>
+<br/>
+Examples<br/>
+<br/>
+</b><b>Read from file</b><br/>
+<br/>
+<tt>tcpdump -nr &lt;file&gt;<br/>
+</tt><b><br/>
+</b><b>Filter in IPs and ports</b><tt><br/>
+</tt><tt><br/>
+tcpdump -nr &lt;file&gt; | awk -F&quot; &quot; '{print $3}' | sort -u | head<br/>
+<br/>
+</tt><b>Filter given source IP</b><tt><br/>
+</tt><tt><br/>
+tcpdump -n src host &lt;IP&gt; -r &lt;file&gt;<br/>
+</tt><b><br/>
+</b><b>Filter given destination IP</b><tt><br/>
+</tt><tt><br/>
+tcpdump -n dst host &lt;IP&gt; -r &lt;file&gt;<br/>
+<br/>
+</tt><b>Filter given port</b><tt><br/>
+</tt><tt><br/>
+tcpdump -n port &lt;port&gt; -r &lt;file&gt;<br/>
+<br/>
+</tt><b>Filter given IP and port<br/>
+</b><br/>
+<tt>tcpdump -n (dst host &lt;IP&gt; and dst port &lt;port&gt;) -r &lt;file&gt;<br/>
+<br/>
+</tt><b>Show dump in HEX<br/>
+</b><tt><br/>
+</tt><tt>tcpdump -nX -r </tt>&lt;file&gt;<br/>
+<br/>
+<b>Write dump to file and use given interface<br/>
+</b><br/>
+<tt>tcpdump -i &lt;interface&gt; -w &lt;output_file&gt;<br/>
+<br/>
+</tt><b>Filter in TCP packets with SYN-ACK flags on and output in ASCII format<br/>
+</b><tt><br/>
+</tt><tt>tcpdump -A -n 'tcp[13] = 24'</tt><b><br/>
+</b><br/>
+<b>Print packets in hex format<br/>
+</b><tt><br/>
+tcpdump -X -n 'tcp[13] = 24'<br/>
+</tt></body></html>

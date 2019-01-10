@@ -1,0 +1,83 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>cmd</title>
+</head><body><b><span style="font-size: 14pt">Cmd</span><br/>
+</b><tt>https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/cmd</tt><b><br/>
+</b><b><br/>
+Windows command interpreter<br/>
+<br/>
+<br/>
+<span style="font-size: 12pt">Examples</span><br/>
+<br/>
+</b><b>Add new user</b><br/>
+<tt><br/>
+net user hacker hacker /add<br/>
+</tt><b><br/>
+</b><b>Add user to administrators group</b><tt><br/>
+</tt><tt><br/>
+net localgroup administrators hacker /add<br/>
+</tt><b><br/>
+Add user to remote desktop group<br/>
+</b><tt><br/>
+net localgroup &quot;Remote Desktop users&quot; hacker /add<br/>
+<br/>
+</tt><b>List active ports<br/>
+</b><tt><br/>
+netstat -ano<br/>
+<br/>
+</tt><b>Show current user<br/>
+</b><tt><br/>
+whoami<br/>
+echo %username%<br/>
+<br/>
+</tt><b>Show hostname<br/>
+</b><tt><br/>
+hostname<br/>
+<br/>
+</tt><b>Show env variables</b><br/>
+<br/>
+<tt>set</tt><br/>
+<br/>
+<b>Show Windows version</b><br/>
+<br/>
+<tt>ver</tt><br/>
+<br/>
+<b>Show system info<br/>
+</b><tt><br/>
+systeminfo<br/>
+<br/>
+</tt><b>List users/localgroups</b><br/>
+<tt><br/>
+net users/localgroup<br/>
+<br/>
+</tt><b>Firewall(XP &gt;=SP2)</b><tt><br/>
+</tt><tt><br/>
+netsh firewall show state<br/>
+netsh firewall show config<br/>
+<br/>
+</tt><b>List scheduled tasks</b><tt><br/>
+</tt><tt><br/>
+schtasks /query /fo LIST /v<br/>
+<br/>
+</tt><b>The following command links running processes to started services<br/>
+</b><tt><br/>
+tasklist /SVC<br/>
+<br/>
+</tt><b>Started services<br/>
+</b><tt><br/>
+net start<br/>
+</tt><br/>
+<b>List drivers<br/>
+</b><tt><br/>
+</tt><tt>DRIVERQUERY</tt><br/>
+<br/>
+<b>Check permissions<br/>
+</b><tt><br/>
+</tt><tt>icacls</tt>	(&gt;=Vista or up)<br/>
+<tt>cacls</tt>	(&lt;XP)<br/>
+<br/>
+<b>Check UAC<br/>
+</b><tt><br/>
+REG QUERY HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System\ /v EnableLUA<br/>
+</tt></body></html>

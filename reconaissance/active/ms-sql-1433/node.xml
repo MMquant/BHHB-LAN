@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>expanded</key><false/>
+  <key>duplicate_of</key><string>76bb06bf-5129-44ba-bc1e-39647e115423</string>
+  <key>nodeid</key><string>bdf6aa3a-f784-4e0d-886b-6a92635c8e6e</string>
+  <key>modified_time</key><integer>1543315000</integer>
+  <key>content_type</key><string>text/xhtml+xml</string>
+  <key>created_time</key><integer>1510774182</integer>
+  <key>info_sort_dir</key><integer>1</integer>
+  <key>title</key><string>MS-SQL/1433</string>
+  <key>version</key><integer>6</integer>
+  <key>order</key><integer>12</integer>
+  <key>info_sort</key><string>order</string>
+</dict>
+</node>

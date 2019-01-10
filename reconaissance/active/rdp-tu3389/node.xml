@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>expanded</key><false/>
+  <key>duplicate_of</key><string>1f182e18-ca43-4a08-b00f-53b68abac847</string>
+  <key>nodeid</key><string>6ac0a2bc-d7d7-4e5c-ae95-4efad0832a96</string>
+  <key>modified_time</key><integer>1543315806</integer>
+  <key>content_type</key><string>text/xhtml+xml</string>
+  <key>created_time</key><integer>1511206991</integer>
+  <key>info_sort_dir</key><integer>1</integer>
+  <key>title</key><string>RDP/TU3389</string>
+  <key>version</key><integer>6</integer>
+  <key>order</key><integer>15</integer>
+  <key>info_sort</key><string>order</string>
+</dict>
+</node>

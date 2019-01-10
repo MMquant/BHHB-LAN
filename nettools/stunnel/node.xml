@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>duplicate_of</key><string>e333f41a-6ee6-4c12-95a3-4fcbfb6706af</string>
+  <key>title</key><string>Stunnel</string>
+  <key>nodeid</key><string>12115a8e-d5d1-40f6-a22b-33e89bdbb50d</string>
+  <key>modified_time</key><integer>1547103458</integer>
+  <key>version</key><integer>6</integer>
+  <key>content_type</key><string>text/xhtml+xml</string>
+  <key>created_time</key><integer>1539246629</integer>
+  <key>info_sort_dir</key><integer>1</integer>
+  <key>order</key><integer>4</integer>
+  <key>info_sort</key><string>order</string>
+</dict>
+</node>

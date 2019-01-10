@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+<version>6</version>
+<dict>
+  <key>duplicate_of</key><string>b141ecc4-452d-4c86-842f-5d3970774fdc</string>
+  <key>title</key><string>Plink</string>
+  <key>nodeid</key><string>ee8608be-07ec-4c7c-aeb7-548714a6c135</string>
+  <key>modified_time</key><integer>1547103521</integer>
+  <key>version</key><integer>6</integer>
+  <key>content_type</key><string>text/xhtml+xml</string>
+  <key>created_time</key><integer>1509895894</integer>
+  <key>info_sort_dir</key><integer>1</integer>
+  <key>order</key><integer>9</integer>
+  <key>info_sort</key><string>order</string>
+</dict>
+</node>

@@ -1,0 +1,21 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>IPtables</title>
+</head><body><b><span style="font-size: 14pt">iptables</span><br/>
+</b><tt>https://linux.die.net/man/8/iptables<br/>
+<br/>
+</tt><b>Administration tool for IPv4/IPv6 packet filtering and NAT</b><tt><br/>
+</tt><tt><br/>
+</tt><b><br/>
+<span style="font-size: 12pt">Examples</span><br/>
+<br/>
+Configure iptables to count incoming and outgoing traffic from/to given IP<br/>
+</b><tt><br/>
+</tt><tt>iptables -I INPUT 1 -s &lt;IP&gt; -j ACCEPT</tt><b><br/>
+</b><tt>iptables -I OUTPUT 1 -d &lt;IP&gt; -j ACCEPT</tt><b><br/>
+</b><b><br/>
+Reset counters<br/>
+</b><tt><br/>
+iptables -Z<br/>
+</tt></body></html>

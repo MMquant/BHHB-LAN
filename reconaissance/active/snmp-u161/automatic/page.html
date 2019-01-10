@@ -1,0 +1,25 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Automatic</title>
+</head><body><b>nmap<br/>
+</b><tt><br/>
+nmap -sV -sU -p 161 -Pn -T5 --host-timeout 15m --script=snmp* -v &lt;IP&gt;<br/>
+<br/>
+</tt><b>Enumerate SNMP service with provided community strings</b><tt><br/>
+</tt><tt><br/>
+onesixtyone -c &lt;community_string_file&gt; -i &lt;IP_file&gt;<br/>
+<br/>
+</tt><b>Enumerate given MIB leaf in IP<br/>
+</b><br/>
+<tt>snmpwalk -c public -v1 &lt;IP&gt; [&lt;MIB LEAF&gt;]<br/>
+<br/>
+</tt><b>General SNMP enumeration<br/>
+</b><br/>
+snmp-check -t &lt;IP&gt;<br/>
+<br/>
+<b>Metasploit<br/>
+<br/>
+</b><tt>use auxiliary/scanner/snmp/snmp_enum<br/>
+use auxiliary/scanner/snmp/snmp_enumshares<br/>
+use auxiliary/scanner/snmp/snmp_enumusers</tt></body></html>

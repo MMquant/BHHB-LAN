@@ -1,0 +1,46 @@
+<!DOCTYPE html  PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<title>Manual</title>
+</head><body><b>Open the session to the IMAP server<br/>
+</b><tt><br/>
+</tt><tt>telnet mail.yourdomain.com 143</tt><b><br/>
+</b><b><br/>
+Send the username and password to the system (the &quot;a&quot; is a required part of the command)<br/>
+</b><tt><br/>
+</tt><tt>a LOGIN &lt;user&gt; &lt;pass&gt;</tt><b><br/>
+</b><b><br/>
+Shows a listing of all the IMAP folders the account has<br/>
+</b><tt><br/>
+</tt><tt>a LIST &quot;&quot; &quot;*&quot;</tt><b><br/>
+</b><b><br/>
+Select the INBOX folder. You can repalce INBOX with any folder you wish to use<br/>
+</b><tt><br/>
+</tt><tt>a SELECT INBOX</tt><b><br/>
+</b><b><br/>
+List all the emails in the selected folder, and will also tell you the flags like &quot;seen&quot; or &quot;NonJunk&quot;<br/>
+</b><tt><br/>
+</tt><tt>a fetch 1:* flags</tt><b><br/>
+</b><b><br/>
+List the header information of message 1 in the selected folder<br/>
+</b><tt><br/>
+</tt><tt>a fetch 1 body[header]</tt><b><br/>
+</b><b><br/>
+List the header AND the contents of message 1 in the selected folder<br/>
+</b><tt><br/>
+</tt><tt>a fetch 1 body[]</tt><b><br/>
+</b><b><br/>
+Set message 1 to be deleted<br/>
+</b><br/>
+It will not delete until the expunge command has been run<b><br/>
+</b><tt><br/>
+</tt><tt>a store 1 +flags deleted</tt><b><br/>
+</b><b><br/>
+Delete any emails that you flagged to be deleted with the previous command<br/>
+</b><tt><br/>
+</tt><tt>a expunge</tt><b><br/>
+</b><b><br/>
+Disconnect from the IMAP server<br/>
+</b><tt><br/>
+a logout<br/>
+</tt></body></html>
